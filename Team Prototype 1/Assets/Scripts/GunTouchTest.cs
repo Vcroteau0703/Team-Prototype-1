@@ -9,6 +9,7 @@ public class GunTouchTest : MonoBehaviour
     private Vector2 touchPosition;
     AudioSource audioSource;
     public GameObject bulletHole;
+    public Transform bulletHoleParent;
     float width;
     float height;
     Vector3 position;
@@ -32,7 +33,7 @@ public class GunTouchTest : MonoBehaviour
                 touch.z = Camera.main.nearClipPlane;
                 position = Camera.main.ScreenToWorldPoint (touch);
 
-                Instantiate(bulletHole, position, Quaternion.identity);
+                Instantiate(bulletHole, position, Quaternion.identity, bulletHoleParent);
                 Debug.Log(position);
             }
         }
