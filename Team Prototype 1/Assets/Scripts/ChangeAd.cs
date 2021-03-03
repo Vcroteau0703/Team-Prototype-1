@@ -7,6 +7,7 @@ public class ChangeAd : MonoBehaviour
 {
     Sprite petahAd;
     Sprite loisAd;
+    Sprite jadenAd;
     public Transform bulletHoleHolder;
     Image ad;
     List<Sprite> ads;
@@ -21,10 +22,12 @@ public class ChangeAd : MonoBehaviour
         // getting ad images
         petahAd = Resources.Load<Sprite>("PetahAd");
         loisAd = Resources.Load<Sprite>("LoisAd");
+        jadenAd = Resources.Load<Sprite>("transparentjaden");
 
         // putting ad images into ads list
         ads.Add(petahAd);
         ads.Add(loisAd);
+        ads.Add(jadenAd);
 
     }
 
@@ -36,8 +39,8 @@ public class ChangeAd : MonoBehaviour
             GameObject.Destroy(child.gameObject);
         }
         // changing ad to random ad in list
-        //int randomAd = Random.Range(0, ads.Count);
+        int randomAd = Random.Range(0, ads.Count);
 
-        ad.sprite = ads[1];
+        ad.sprite = ads[randomAd];
     }
 }
