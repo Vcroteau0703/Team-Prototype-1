@@ -209,6 +209,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletHoleHolder: {fileID: 781520524}
+  ads:
+  - {fileID: 21300000, guid: dc7784b4c50f89b47b5382f2497c3e93, type: 3}
+  - {fileID: 21300000, guid: d502b612fb663fa4daf463de90964891, type: 3}
+  - {fileID: 21300000, guid: 19c97dad4093d8042bf2e8b2c700f3e7, type: 3}
 --- !u!1 &636017374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,7 +1111,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1646512243
 RectTransform:
@@ -1193,7 +1197,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e031e086543f13f4e8e971fa823f8050, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.55
   m_Pitch: 1
   Loop: 0
   Mute: 0

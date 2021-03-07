@@ -10,24 +10,13 @@ public class ChangeAd : MonoBehaviour
     Sprite jadenAd;
     public Transform bulletHoleHolder;
     Image ad;
-    List<Sprite> ads;
+
+    public Sprite[] ads;
 
     // Start is called before the first frame update
     void Start()
     {
         ad = GetComponent<Image>();
-
-        ads = new List<Sprite>();
-
-        // getting ad images
-        petahAd = Resources.Load<Sprite>("PetahAd");
-        loisAd = Resources.Load<Sprite>("LoisAd");
-        jadenAd = Resources.Load<Sprite>("transparentjaden");
-
-        // putting ad images into ads list
-        ads.Add(petahAd);
-        ads.Add(loisAd);
-        ads.Add(jadenAd);
 
     }
 
@@ -39,7 +28,7 @@ public class ChangeAd : MonoBehaviour
             GameObject.Destroy(child.gameObject);
         }
         // changing ad to random ad in list
-        int randomAd = Random.Range(0, ads.Count);
+        int randomAd = Random.Range(0, ads.Length);
 
         ad.sprite = ads[randomAd];
     }
