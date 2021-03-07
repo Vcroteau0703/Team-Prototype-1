@@ -51,15 +51,15 @@ public class CutterTest : MonoBehaviour
         {
             Debug.LogError("Please add the Left Cut Collider prefab for this to work");
         }
-        if (!GameObject.Find("Left Cut Collider"))
+        if (!GameObject.Find("Right Cut Collider"))
         {
             Debug.LogError("Please add the Right Cut Collider prefab for this to work");
         }
-        if (!GameObject.Find("Left Cut Collider"))
+        if (!GameObject.Find("Top Cut Collider"))
         {
             Debug.LogError("Please add the Top Cut Collider prefab for this to work");
         }
-        if (!GameObject.Find("Left Cut Collider"))
+        if (!GameObject.Find("Bottom Cut Collider"))
         {
             Debug.LogError("Please add the Bottom Cut Collider prefab for this to work");
         }
@@ -68,13 +68,4 @@ public class CutterTest : MonoBehaviour
             Debug.LogError("Please add the Cutter prefab for this to work");
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(cutObject == cutColliders[0])
-        {
-            Debug.Log("did it work?");
-        }
-    }
-
 }
