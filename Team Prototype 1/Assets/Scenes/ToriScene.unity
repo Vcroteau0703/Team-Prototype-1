@@ -212,7 +212,6 @@ MonoBehaviour:
   ads:
   - {fileID: 21300000, guid: dc7784b4c50f89b47b5382f2497c3e93, type: 3}
   - {fileID: 21300000, guid: d502b612fb663fa4daf463de90964891, type: 3}
-  - {fileID: 21300000, guid: 19c97dad4093d8042bf2e8b2c700f3e7, type: 3}
 --- !u!1 &636017374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,6 +1165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da05d821e369334d8b9afeff11ddf47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flame: {fileID: 0}
   bulletHole: {fileID: 3688132605564524065, guid: 859df7495f8fc7d4e80829b15fdc71a0,
     type: 3}
   explosion: {fileID: 1292561940063343557, guid: d83c4ff497a777b469497df4bb885346,
