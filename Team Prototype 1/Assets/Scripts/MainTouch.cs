@@ -10,11 +10,13 @@ public class MainTouch : MonoBehaviour
     public GameObject flame;
     public GameObject bulletHole;
     public GameObject explosion;
+    public GameObject shatter;
     public Transform bulletHoleParent;
     Vector3 position;
     bool gun = false;
     bool explode = false;
     bool flamethrower = false;
+    bool punch = false;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +56,15 @@ public class MainTouch : MonoBehaviour
 
                 Instantiate(flame, position, Quaternion.identity, bulletHoleParent);
             }
+            if(Input.GetTouch(i).phase == TouchPhase.Began && punch)
+            {
+                //Punch the screen
+                touch = Input.GetTouch(i).position;
+                touch.z = Camera.main.nearClipPlane;
+                position = Camera.main.ScreenToWorldPoint(touch);
+
+                Instantiate(shatter, position, Quaternion.identity, bulletHoleParent);
+            }
         }
     }
 
@@ -61,6 +72,7 @@ public class MainTouch : MonoBehaviour
     {
         explode = false;
         flamethrower = false;
+        punch = false;
         gun = true;
     }
 
@@ -68,12 +80,21 @@ public class MainTouch : MonoBehaviour
     {
         gun = false;
         flamethrower = false;
+        punch = false;
         explode = true;
     }
     public void Activateflamethrower()
     {
         gun = false;
-        flamethrower = true;
+        punch = false;
         explode = false;
+        flamethrower = true;
+    }
+    public void ActivatePunch()
+    {
+        gun = false;
+        flamethrower = false;
+        explode = false;
+        punch = true;
     }
 }
